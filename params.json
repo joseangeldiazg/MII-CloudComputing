@@ -1,0 +1,6 @@
+{
+  "name": "ContentTaskMS",
+  "tagline": "Proyecto de prácticas para la asignatura Cloud Computing de primer curso del master profesional en ingeniería informática de la UGR. ",
+  "body": "#ContentTaskMS\r\n\r\n## Problema y solución propuesta\r\n\r\n### Problema\r\n\r\nControlar un sistema CMS como por ejemplo Wordpress donde colaboran muchas personas, como por ejemplo en un magazine online, puede ser una ardua labor a la hora de la planificación y gestión de tareas como por ejemplo calendarios de publicación, eventos relevantes, o las fechas de entrega para diseños gráficos necesarios como por ejemplo para una campaña de publicidad en dicho magazine.\r\n\r\n### Solución\r\n\r\nSe desarrollará un software capaz de gestionar todas las tareas o al menos las criticas de un magazine online o un sistema de gestión de contenidos donde colabore mucha gente y sea necesaria una organización y control de los hitos y tareas realizadas.\r\n\r\n## Tecnologías usadas\r\n\r\n### Back-end\r\n\r\nPor determinar.\r\n\r\n### Front-end\r\n\r\nPor determinar.\r\n\r\n## Licencia\r\n\r\nLicencia [GNU GPL v3](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/LICENSE).\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
