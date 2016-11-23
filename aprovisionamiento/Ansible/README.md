@@ -8,12 +8,12 @@ Este repositorio contiene lo necesario para aprovisionar una isntancia cloud con
 
 2. Lo siguiente es modificar el fichero ``ansible.cfg``, donde deberemos especificar la ruta de nuestra clave para acceder por ssh sin tener que andar continuamente añadiendo esta ruta.
 
-3. Tras este paso solo debemos ejecutar el siguiente comando:
+3. Tras este paso solo debemos ejecutar el siguiente comando: `` ansible-playbook -i ansible_hosts -b mean.yml ``.
+4. Tras este paso veremos el siguiente resultado:
 
-``` 
-ansible-playbook -i ansible_hosts -b mean.yml 
 
-```
+
+
 
 ## 2- Consideraciones
 
