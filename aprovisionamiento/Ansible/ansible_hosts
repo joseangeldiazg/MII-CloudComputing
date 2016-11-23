@@ -1,0 +1,2 @@
+[cc]
+IP_instacia ansible_ssh_user='ubuntu'
