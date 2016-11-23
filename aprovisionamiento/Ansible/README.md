@@ -12,6 +12,7 @@ Este repositorio contiene lo necesario para aprovisionar una isntancia cloud con
 4. Tras este paso veremos el siguiente resultado:
 
 
+![Resultado Ansible](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/ansible.png "Resultado Ansible.")
 
 
 

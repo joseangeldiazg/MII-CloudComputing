@@ -11,7 +11,9 @@
 
 5. Tras esto el resultado será parecido a lo siguiente:
 
+![Resultado Chef](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/chef.png "Resultado Chef.")
 
+En este caso los paquetes ya estaban provisionados por Ansible pero podemos ver como no da error de ningun tipo. 
 
 ## 2- Consideraciones
 
