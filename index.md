@@ -25,7 +25,7 @@ Dado el carácter cloud y la necesidad de un buen escalado de cara al aumento de
 ### Microservicios
 Los microservicios a implementar en la primera versión de la aplicación serán los críticos para un equipo de personas que trabajen colaborativamente en un CMS. Por un lado se implementaran un microservicio encargado de la gestión de roles dentro del equipo, a su vez se implementará otro microservicio encargado de la gestión de las tareas e información asociada a estas que pueden tener asignadas las diferentes personas involucradas.
 
-![Arquitectura Microservicios](https://github.com/joseangeldiazg/MII-CloudComputing/blob/gh-pages/images/microservicios.png "Arquitectura.")
+![Arquitectura Microservicios](images/microservicios.png "Arquitectura.")
 
 ### Back-end
 
