@@ -49,7 +49,7 @@ Para el provisionamiento de la aplicacion puede optarse por dos sistemas de apro
 
 Para poder provisionar nuestra instacia el primer paso es tener una instancia levantada en algun servicio cloud y configurar las claves de acceso para evitar tener que estar introduciendo continuamente estas. Una vez que la máquina virtual nos responda podremos comenzar con el provisionamiento. 
 
-Para aprovisionar usando Ansible, tenemos los pasos detallados aquí. 
+Para aprovisionar usando Ansible, tenemos los pasos detallados [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Ansible). 
 
-Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla aquí. 
+Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla [aquí] (https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Chef). 
 
