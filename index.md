@@ -52,3 +52,12 @@ Para poder provisionar nuestra instacia el primer paso es tener una instancia le
 Para aprovisionar usando Ansible, tenemos los pasos detallados [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Ansible). 
 
 Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla [aquí] (https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Chef). 
+
+###Explicación de la selección de los sistemas de provisionamiento
+
+Se han usado estos sistemas de provisionamiento inicalmente por su facilidad de uso ya que son mucho más sencillo e intuitivos que otras opciones estudiadas como Puppet o Salt. Esta sencillez destaca notablemente en Ansible donde no hay que desplegar ninguna estructura de directorios precisa para que este funcione, a diferencia de Chef donde si hay que realizarla lo que hace que sea un poco más complejo que Ansible, dentro de la simplicidad. 
+
+
+###Corrección de los compañeros
+
+Se ha corregido el provisionamiento realizado con Ansible del usuario [@fblupi](https://github.com/fblupi) Puede verse la correción en el comentario de [este enlace.](https://github.com/fblupi/GEventator/issues/13#issuecomment-262804439). 
