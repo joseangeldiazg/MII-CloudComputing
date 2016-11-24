@@ -57,7 +57,9 @@ Si por el contrario preferimos usar Chef, podemos encontrar la receta y los paso
 
 Se han usado estos sistemas de provisionamiento inicalmente por su facilidad de uso ya que son mucho más sencillo e intuitivos que otras opciones estudiadas como Puppet o Salt. Esta sencillez destaca notablemente en Ansible donde no hay que desplegar ninguna estructura de directorios precisa para que este funcione, a diferencia de Chef donde si hay que realizarla lo que hace que sea un poco más complejo que Ansible, dentro de la simplicidad. 
 
+Es este el motivo, por el que si hubiera que elegir de entre los dos sistemas usados uno solo, nos quedariamos con Ansible dada su potencia y facilidad de uso con tan solo realizar un playbook. 
+
 
 ###Corrección de los compañeros
 
-Se ha corregido el provisionamiento realizado con Ansible del usuario [@fblupi](https://github.com/fblupi) Puede verse la correción en el comentario de [este enlace.](https://github.com/fblupi/GEventator/issues/13#issuecomment-262804439). 
+Se ha corregido el provisionamiento realizado con Ansible del usuario [@fblupi](https://github.com/fblupi) Puede verse la correción en el comentario de [este enlace.](https://github.com/fblupi/GEventator/issues/13#issuecomment-262804439). Tambien se ha probado el provisionamiento de este mismo usuario realizado con chef, la corrección puede verse en el siguiente comentario en [su issue.](https://github.com/fblupi/GEventator/issues/14#issuecomment-262807593)
