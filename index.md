@@ -52,4 +52,3 @@ Para poder provisionar nuestra instacia el primer paso es tener una instancia le
 Para aprovisionar usando Ansible, tenemos los pasos detallados [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Ansible). 
 
 Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla [aquí] (https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Chef). 
-
