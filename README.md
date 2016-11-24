@@ -34,3 +34,17 @@ En el Front-end usaremos el framework AngularJS, CSS3 con Bootstrap y HTML5.
 ###Licencia
 
 Licencia [GNU GPL v3](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/LICENSE).
+
+
+##Provisionamiento 
+
+Para el provisionamiento de la aplicacion puede optarse por dos sistemas de aprovisionamiento, Ansible y Chef. Antes de comenzar con el provisinamiento, debemos tener en cuenta las siguintes consideraciones:
+
+1. La máquina virtual usada es Ubuntu 14.04 ofrecida por AWS. 
+2. El sistema operativo nativo usado es Mac OS x por lo que algunos comandos pueden cambiar. 
+
+Para poder provisionar nuestra instacia el primer paso es tener una instancia levantada en algun servicio cloud y configurar las claves de acceso para evitar tener que estar introduciendo continuamente estas. Una vez que la máquina virtual nos responda podremos comenzar con el provisionamiento. 
+
+Para aprovisionar usando Ansible, tenemos los pasos detallados [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Ansible). 
+
+Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla [aquí] (https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Chef). 
