@@ -1,0 +1,19 @@
+- hosts: all
+  sudo: true
+  tasks:
+  - name: Actualizar cache
+    apt: update_cache=yes
+  - name: Actualizamos repos.
+    shell: sudo apt-get update && sudo apt-get upgrade -y
+  - name: Instalar Git
+    apt: name=git state=present
+  - name: Instalar MongoDB
+    apt: name=mongodb state=present
+  - name: NodeSource
+    shell: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  - name: Instalamos Node.js        
+    apt: name=nodejs state=present
+  - name: Instalamos herramientas de compilacion.
+    shell: sudo apt-get install -y build-essential
+  - name: Express                  
+    npm: name=express global=yes
