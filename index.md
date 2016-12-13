@@ -104,10 +104,20 @@ export AWS_KEYPATH='your-keypath'
 
 Tras este punto debemos ejecutar el comando ``vagrant init`` para obtener nuestro modelo de fichero Vagrant para poder introducir los comandos necesarios para la orquestación.
 
+En este documento deberemos cambiar el nombre del grupo de seguridad por el que se vaya a usar y debemos llevar cuidado de que la region donde creamos el grupo de seguridad y donde crearemos las máquinas sean la misma sino no funcionará.
+
+
+En cuanto al aprovisionamiento, para poder ejecutar sin problema, deberemos cambiar en el fichero ``ansible.cfg`` la palabra RUTA por la ruta al fichero .pem que estemos usando. 
+
+
 Dado que queremos trabajar con microservicios levantaremos 3 máquinas virtuales. Una encargada de los roles dentro del sistema, otra encargada de las tareas y otra para gestionar la persistencia. El provisionamiento lo llevaremos a cabo con Ansible, teniendo por tanto que alojar el Playbook necesario dentro del mismo directorio de orquestación para evitar problemas.
 
 El contenido del fichero Vagrantfile es [el siguiente](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/orquestacion/Vagrantfile).
 
 Para ejecutar la orquestación tan solo deberemos ejecutar el comando ``vagrant up`` que creará nuestras máquinas virtuales y las provisionará para poder alojar nuestra aplicación.
 
-Una vez finalizado, podremos acceder a nuestras máquinas virtuales facilmente con el comando ``vagrant ssh nombre``donde ``nombre``en nuestro caso puede tener tres valores, _tareas, roles o persistencia_.
+Una vez finalizado, podremos acceder a nuestras máquinas virtuales facilmente con el comando ``vagrant ssh nombre``donde ``nombre``en nuestro caso puede tener tres valores, _tareas, roles o almacenamiento_.
+
+### Corrección de compañeros:
+
+Se ha corregido el sistema de orquestación del usuario [AythaE](https://github.com/AythaE). El issue asociado es [este](https://github.com/AythaE/DeFesti/commit/d9d62f9a0b9c5770ca713fcc3878103ed30b674f#commitcomment-20169134).
