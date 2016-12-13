@@ -47,4 +47,8 @@ Para poder provisionar nuestra instacia el primer paso es tener una instancia le
 
 Para aprovisionar usando Ansible, tenemos los pasos detallados [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Ansible). 
 
-Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla [aquí] (https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Chef). 
+Si por el contrario preferimos usar Chef, podemos encontrar la receta y los pasos para ejecutarla [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/aprovisionamiento/Chef). 
+
+## Orquestación 
+
+Para la orquestacion de las máquinas virtuales que acogeran los microservicios detallados anteriormente usaremos Vagrant. Los pasos necesarios para realizarla estan detallados [aqui](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/orquestacion/README.md)
