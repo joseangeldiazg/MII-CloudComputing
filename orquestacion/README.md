@@ -35,6 +35,18 @@ export AWS_KEYPATH='your-keypath'
 
 Obtenemos por tanto el fichero Vagrantfile que podemos encontrar en [este repositorio](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/orquestacion/Vagrantfile).
 
+
+En este documento deberemos cambiar el nombre del grupo de seguridad por el que se vaya a usar y debemos llevar cuidado de que la region donde creamos el grupo de seguridad y donde crearemos las máquinas sean la misma sino no funcionará.
+
+
+En cuanto al aprovisionamiento, para poder ejecutar sin problema, deberemos cambiar en el fichero ``ansible.cfg`` la palabra RUTA por la ruta al fichero .pem que estemos usando. 
+
 Para ejecutar la orquestación tan solo deberemos ejecutar el comando ``vagrant up`` que creará nuestras máquinas virtuales y las provisionará para poder alojar nuestra aplicación.
 
-Una vez finalizado, podremos acceder a nuestras máquinas virtuales facilmente con el comando ``vagrant ssh nombre``donde ``nombre``en nuestro caso puede tener tres valores, _tareas, roles o persistencia_.
+Una vez finalizado, podremos acceder a nuestras máquinas virtuales facilmente con el comando ``vagrant ssh nombre``donde ``nombre``en nuestro caso puede tener tres valores, _tareas, roles o almacenamiento_.
+
+El resultado podemos verlo en las siguientes imagenes. 
+
+![Resultado Vagrant](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/vok.png "Resultado Vagrant.")
+
+![Conectando a las máquinas con Vagrant](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/vssh.png "Conectando a las máquinas con Vagrant.")
