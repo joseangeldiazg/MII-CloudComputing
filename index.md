@@ -129,4 +129,4 @@ Se han usado contenedores Docker siguiendo las [siguientes instrucciones](https:
 
 ### Correcion de compañeros:
 
-Se ha corregido el sistema de contenedores del usuario [mmaguero](https://github.com/mmaguero). El issue asociado es [este](https://github.com/mmaguero/MII-CC16-17/issues/7#issuecomment-271393603).
+Se ha corregido el sistema de contenedores del usuario [mmaguero](https://github.com/mmaguero). El issue asociado a la correción es [este](https://github.com/mmaguero/MII-CC16-17/issues/7#issuecomment-271393603).
