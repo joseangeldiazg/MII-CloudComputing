@@ -121,3 +121,12 @@ Una vez finalizado, podremos acceder a nuestras máquinas virtuales facilmente c
 ### Corrección de compañeros:
 
 Se ha corregido el sistema de orquestación del usuario [AythaE](https://github.com/AythaE). El issue asociado es [este](https://github.com/AythaE/DeFesti/commit/d9d62f9a0b9c5770ca713fcc3878103ed30b674f#commitcomment-20169134).
+
+
+## Contenedores
+
+Se han usado contenedores Docker siguiendo las [siguientes instrucciones](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/contenedores/README.md) y un repositorio en Dockerhub enlazado al repositorio central del proyecto. El Dockerfile utilizado podemos encontrarlo [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/Dockerfile).
+
+### Correcion de compañeros:
+
+Se ha corregido el sistema de contenedores del usuario [mmaguero](https://github.com/mmaguero). El issue asociado es [este](https://github.com/mmaguero/MII-CC16-17/issues/7#issuecomment-271393603).
