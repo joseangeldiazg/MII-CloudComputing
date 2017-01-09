@@ -51,4 +51,8 @@ Si por el contrario preferimos usar Chef, podemos encontrar la receta y los paso
 
 ## Orquestación 
 
-Para la orquestacion de las máquinas virtuales que acogeran los microservicios detallados anteriormente usaremos Vagrant. Los pasos necesarios para realizarla estan detallados [aqui](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/orquestacion/README.md)
+Para la orquestación de las máquinas virtuales que acogeran los microservicios detallados anteriormente usaremos Vagrant. Los pasos necesarios para realizarla estan detallados [aqui](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/orquestacion/README.md)
+
+## Contenedores
+
+Se han usado contenedores Docker siguiendo las [siguientes instrucciones](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/contenedores/README.md) y un repositorio en Dockerhub enlazado al repositorio central del proyecto. El Dockerfile utilizado podemos encontrarlo [aquí](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/Dockerfile).
