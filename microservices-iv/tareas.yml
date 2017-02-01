@@ -1,0 +1,31 @@
+- hosts: all
+  sudo: true
+  tasks:
+    - name: Actualizar cache
+      apt: update_cache=yes
+
+    - name: Actualizamos repos.
+      shell: sudo apt-get update && sudo apt-get upgrade -y
+
+    - name: Instalar Git
+      apt: name=git state=present
+
+    - name: Instalar paquetes necesarios para Docker
+      shell: sudo apt-get install curl linux-image-extra-$(uname -r) linux-image-extra-virtual
+      shell: sudo apt-get install apt-transport-https ca-certificates
+
+    - name: Obtenemos el GPG Key
+      shell: curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
+
+    - name: Añadimos un repositorio estable
+      shell: sudo add-apt-repository "deb https://apt.dockerproject.org/repo/ ubuntu-$(lsb_release -cs) main"
+
+    - name: Instalamos Docker:
+      shell: sudo apt-get update
+      shell: sudo apt-get -y install docker-engine
+
+    - name: Descargamos contenedor del ms Tareas
+      shell: docker pull joseangeldiazf/tareas
+
+    - name: Arrancamos el contenedor Docker
+      shell: docker run -itd --name tareas  joseangeldiazf/tareas
