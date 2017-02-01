@@ -22,10 +22,10 @@ En este directorio encontramos todo lo necesario para provisionar una arquitectu
 
 Para alojar nuestros servicios crearemos los contenedores en DockerHub. Para ello, debemos crear repositorios automáticos enlazados a git hub tras lo cual indicaremos manualmente la direccción de los dockerfile ya que estos no estan en la raiz del repositorio. 
 
-Los Dockerfile creados, dado que la aplicacion se basará en la pila MEAN usan una imagen de Docker con nodeJS y Alpine haciendo así que los contenedores para nuestros microservicios sean ligeros. 
+Los Dockerfile creados, dado que la aplicación se basará en la pila MEAN usan una imagen de Docker con nodeJS y Alpine haciendo así que los contenedores para nuestros microservicios sean ligeros. 
 
-- [Docker  file para ms Tareas](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileTareas)
-- [Docker file para ms Roles](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileRoles)
+- [Dockerfile para ms Tareas](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileTareas)
+- [Dockerfile para ms Roles](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileRoles)
 
 
 ## Orquestación de máquinas 
@@ -79,18 +79,18 @@ El resulado de haberlo creado podemos verlo en la siguiente capura, aunque como 
 
 ### Monitorización
 
-Las estadísticas del funcionamiento de las máquinas virtuales también son accesibles desde Amazon CloudWatch. Son un factor importante a tener en cuenta, por lo tanto deberemos crear un panel de estadisticas, añadimos las máquinas de nuestros microservicios y las métricas que nos interesan tras lo cual veremos el siguiente resultado.
+Las estadísticas del funcionamiento de las máquinas virtuales también son accesibles desde Amazon CloudWatch. Son un factor importante a tener en cuenta, por lo tanto deberemos crear un panel de estadísticas, añadimos las máquinas de nuestros microservicios y las métricas que nos interesan tras lo cual veremos el siguiente resultado.
 
 ![Metricas](../images/metrics.png)
 
 
 # Ejecución 
 
-Para poner en produccion todo lo anterior y tener por tanto nuestra infraestructura lista para recibir nuestra app. Solo tenemos que usar el siguiente comando:
+Para poner en producción todo lo anterior y tener por tanto nuestra infraestructura lista para recibir nuestra app. Solo tenemos que usar el siguiente comando:
 
 	vagrant up --provider=aws 
 
-Tras esto podemos ver como se crean nuestras instancias en AWS y además se bajan y ejecutan los contenedores Docker en ellas. El resultado podemos verlo en las siguientes capturas de pantalla. 
+Tras esto podemos ver como se crean nuestras instancias en AWS y además se descargan y ejecutan los contenedores Docker en ellas. El resultado podemos verlo en las siguientes capturas de pantalla. 
 
 ![Creación de las instacias](../images/msaws.png)
 
