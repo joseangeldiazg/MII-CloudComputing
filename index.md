@@ -141,12 +141,12 @@ En este directorio encontramos todo lo necesario para provisionar una arquitectu
 ![Imagen 1][1] ![Imagen 2][2] ![Imagen 3][3]  ![Imagen 4][4]  ![Imagen 5][5] ![Imagen 6][6] 
 
 
- [1]: https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logovagrant.png
- [2]: https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logomean.png 
- [3]: https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logoaws.png
- [4]: https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logodocker.png
- [5]: https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logomlab.png
- [6]: https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logoansible.png
+ [1]: ../images/logovagrant.png
+ [2]: ../images/logomean.png 
+ [3]: ../images/logoaws.png
+ [4]: ../images/logodocker.png
+ [5]: ../images/logomlab.png
+ [6]: ../images/logoansible.png
 
 
 # Configuración
@@ -197,7 +197,7 @@ Hay algunas tareas necesarias en la aplicación y las cuales podremos externaliz
 Usaremos el SasS [mLab](www.mlab.com) para extraer el servicio de la base de datos de nuestra aplicación. Para ello necesitamos crear cuenta en dicho portal y de manera gratuita obtenemos una base de datos MongoDB (v3.2.11) a la que podremos conectar fácilmente y la cual está separada de nuestro despliegue final. Una vez creada la base de datos el resultado podemos verlo en la siguiente captura de pantalla. Para conectar con nuestra base de datos solo tendriamos que añadir los credenciales en el código de la app. 
 
 
-![BD en mLab](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/bdmlab.png)
+![BD en mLab](../images/bdmlab.png)
 
 
 ### Log
@@ -209,14 +209,14 @@ En nuestro caso ya tenemos preparados los grupos de seguridad y usuarios por lo 
 El resulado de haberlo creado podemos verlo en la siguiente capura, aunque como no hay nada aún desplegado este no tiene contenido. 
 
 
-![Logs](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/logs.png)
+![Logs](../images/logs.png)
 
 
 ### Monitorización
 
 Las estadísticas del funcionamiento de las máquinas virtuales también son accesibles desde Amazon CloudWatch. Son un factor importante a tener en cuenta, por lo tanto deberemos crear un panel de estadisticas, añadimos las máquinas de nuestros microservicios y las métricas que nos interesan tras lo cual veremos el siguiente resultado.
 
-![Metricas](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/metrics.png)
+![Metricas](../images/metrics.png)
 
 
 # Ejecución 
@@ -227,6 +227,6 @@ Para poner en produccion todo lo anterior y tener por tanto nuestra infraestruct
 
 Tras esto podemos ver como se crean nuestras instancias en AWS y además se bajan y ejecutan los contenedores Docker en ellas. El resultado podemos verlo en las siguientes capturas de pantalla. 
 
-![Creación de las instacias](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/msaws.png)
+![Creación de las instacias](../images/msaws.png)
 
-![Instalacion de Docker con Ansible](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/msdocker.png)
+![Instalacion de Docker con Ansible](../images/msdocker.png)
