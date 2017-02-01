@@ -1,0 +1,50 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+
+	config.vm.define :tareas do |tareas|
+		tareas.vm.host_name = "tareas"
+		tareas.vm.provider :aws do |aws, override|
+			aws.access_key_id = ENV['AWS_KEY']
+			aws.secret_access_key = ENV['AWS_SECRET']
+			aws.keypair_name = ENV['AWS_KEYNAME']
+
+			aws.ami = "ami-01f05461"
+			aws.region = "us-west-2"
+			aws.instance_type = "t2.micro"
+			aws.security_groups = ["cc"]
+
+			override.vm.box = "dummy"
+			override.ssh.username = "ubuntu"
+			override.ssh.private_key_path = ENV['AWS_KEYPATH']
+		end
+		tareas.vm.provision "ansible" do |ansible|
+			ansible.playbook = "tareas.yml"
+		end
+	end
+  config.vm.define :roles do |roles|
+		roles.vm.host_name = "roles"
+		roles.vm.provider :aws do |aws, override|
+			aws.access_key_id = ENV['AWS_KEY']
+			aws.secret_access_key = ENV['AWS_SECRET']
+			aws.keypair_name = ENV['AWS_KEYNAME']
+
+			aws.ami = "ami-01f05461"
+			aws.region = "us-west-2"
+			aws.instance_type = "t2.micro"
+			aws.security_groups = ["cc"]
+
+			override.vm.box = "dummy"
+			override.ssh.username = "ubuntu"
+			override.ssh.private_key_path = ENV['AWS_KEYPATH']
+		end
+		roles.vm.provision "ansible" do |ansible|
+			ansible.playbook = "roles.yml"
+		end
+	end
+end
