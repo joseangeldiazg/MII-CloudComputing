@@ -1,0 +1,14 @@
+{
+  "name": "ContentTASKMS",
+  "version": "1.0.0",
+  "description": "Poyecto de la asignatura CloudComputing",
+  "author": "joseangeldiazg <joseadiazg02@correo.ugr.es>",
+  "main": "contentask.js",
+  "scripts": {
+    "start": "node contentask.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.8.1"
+  }
+}
