@@ -29,11 +29,11 @@ Los microservicios a implementar en la primera versión de la aplicación serán
 
 ### Back-end
 
-El back end irá implementado sobre node.js, con el microframework Express y bases de datos MongoDB.
+El backend irá implementado sobre node.js, con el microframework Express y bases de datos MongoDB.
 
 ### Front-end
 
-En el Front-end usaremos el framework AngularJS, CSS3 con Bootstrap y HTML5.
+En el Frontend usaremos el framework AngularJS, CSS3 con Bootstrap y HTML5.
 
 ### Licencia
 
@@ -42,7 +42,7 @@ Licencia [GNU GPL v3](https://github.com/joseangeldiazg/MII-CloudComputing/blob/
 
 ## Provisionamiento
 
-Para el provisionamiento de la aplicacion puede optarse por dos sistemas de aprovisionamiento, Ansible y Chef. Antes de comenzar con el provisinamiento, debemos tener en cuenta las siguintes consideraciones:
+Para el provisionamiento de la aplicación puede optarse por dos sistemas de aprovisionamiento, Ansible y Chef. Antes de comenzar con el provisinamiento, debemos tener en cuenta las siguintes consideraciones:
 
 1. La máquina virtual usada es Ubuntu 14.04 ofrecida por AWS.
 2. El sistema operativo nativo usado es Mac OS x por lo que algunos comandos pueden cambiar.
@@ -62,13 +62,13 @@ Es este el motivo, por el que si hubiera que elegir de entre los dos sistemas us
 
 ### Corrección de los compañeros
 
-Se ha corregido el provisionamiento realizado con Ansible del usuario [@fblupi](https://github.com/fblupi) Puede verse la correción en el comentario de [este enlace.](https://github.com/fblupi/GEventator/issues/13#issuecomment-262804439). Tambien se ha probado el provisionamiento de este mismo usuario realizado con chef, la corrección puede verse en el siguiente comentario en [su issue.](https://github.com/fblupi/GEventator/issues/14#issuecomment-262807593)
+Se ha corregido el provisionamiento realizado con Ansible del usuario [@fblupi](https://github.com/fblupi) Puede verse la correción en el comentario de [este enlace.](https://github.com/fblupi/GEventator/issues/13#issuecomment-262804439). También se ha probado el provisionamiento de este mismo usuario realizado con chef, la corrección puede verse en el siguiente comentario en [su issue.](https://github.com/fblupi/GEventator/issues/14#issuecomment-262807593)
 
 ## Orquestación
 
 ### Premisas iniciales.
 
-Antes de comenzar con la documentación de esta parte de la practica en la que explicaremos como orquestar las máquinas virtuales necesarias para acoger nuestros micro servicios es necesario realizar una serie de pequeñas premisas sobre el sistema usado, dado que las ordenes usadas pueden estar sujetas a modificaciones según el sistema que usemos. 
+Antes de comenzar con la documentación de esta parte de la práctica en la que explicaremos como orquestar las máquinas virtuales necesarias para acoger nuestros microservicios es necesario realizar una serie de pequeñas premisas sobre el sistema usado, dado que las ordenes usadas pueden estar sujetas a modificaciones según el sistema que usemos. 
 
 1. Sistema operativo Mac OS X Sierra.
 2. Versión de Vagrant: 1.9.1
@@ -135,7 +135,7 @@ Se ha corregido el sistema de contenedores del usuario [mmaguero](https://github
 
 # Infraestructura de Microservicios completa
 
-En este directorio encontramos todo lo necesario para provisionar una arquitectura de microservicios basada en contenedores Docker y máquinas virtuales de Amazon Web Services. La orquestacion y provisionamiento se haran con Vagrant y Ansible y tambien de explicará el uso de ciertos SaaS para deslocalizar ciertas tareas críticas de la aplicación. 
+En este directorio encontramos todo lo necesario para provisionar una arquitectura de microservicios basada en contenedores Docker y máquinas virtuales de Amazon Web Services. La orquestación y provisionamiento se haran con Vagrant y Ansible y tambien de explicará el uso de ciertos SaaS para deslocalizar ciertas tareas críticas de la aplicación. 
 
 
 ![Imagen 1][1] ![Imagen 2][2] ![Imagen 3][3]  ![Imagen 4][4]  ![Imagen 5][5] ![Imagen 6][6] 
@@ -155,12 +155,12 @@ En este directorio encontramos todo lo necesario para provisionar una arquitectu
 ## Contenedores
 
 
-Para alojar nuestros servicios crearemos los contenedores en DockerHub. Para ello, debemos crear repositorios automáticos enlazados a git hub tras lo cual indicaremos manualmente la direccción de los dockerfile ya que estos no estan en la raiz del repositorio. 
+Para alojar nuestros servicios crearemos los contenedores en DockerHub. Para ello, debemos crear repositorios automáticos enlazados a GitHub tras lo cual indicaremos manualmente la direccción de los Dockerfile ya que estos no estan en la raiz del repositorio. 
 
 Los Dockerfile creados, dado que la aplicacion se basará en la pila MEAN usan una imagen de Docker con nodeJS y Alpine haciendo así que los contenedores para nuestros microservicios sean ligeros. 
 
-- [Docker  file para ms Tareas](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileTareas)
-- [Docker file para ms Roles](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileRoles)
+- [Dockerfile para ms Tareas](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileTareas)
+- [Dockerfile para ms Roles](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/dockerfileRoles)
 
 
 ## Orquestación de máquinas 
@@ -221,11 +221,11 @@ Las estadísticas del funcionamiento de las máquinas virtuales también son acc
 
 # Ejecución 
 
-Para poner en produccion todo lo anterior y tener por tanto nuestra infraestructura lista para recibir nuestra app. Solo tenemos que usar el siguiente comando:
+Para poner en producción todo lo anterior y tener por tanto nuestra infraestructura lista para recibir nuestra app. Solo tenemos que usar el siguiente comando:
 
 	vagrant up --provider=aws 
 
-Tras esto podemos ver como se crean nuestras instancias en AWS y además se bajan y ejecutan los contenedores Docker en ellas. El resultado podemos verlo en las siguientes capturas de pantalla. 
+Tras esto podemos ver como se crean nuestras instancias en AWS y además se descargan y ejecutan los contenedores Docker en ellas. El resultado podemos verlo en las siguientes capturas de pantalla. 
 
 ![Creación de las instacias](images/msaws.png)
 
