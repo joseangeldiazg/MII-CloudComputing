@@ -3,6 +3,19 @@
 En este directorio dentro del repositorio encontramos todo lo necesario para provisionar una arquitectura de micro-servicios basada en contenedores Docker y máquinas virtuales de Amazon Web Services. La orquestacion y provisionamiento se haran con Vagrant y Ansible y tambien de explicará el uso de ciertos SaaS para deslocalizar ciertas tareas críticas de la aplicación. 
 
 
+![Imagen 1][1] ![Imagen 2][2] ![Imagen 3][3]  ![Imagen 4][4]  ![Imagen 5][5] ![Imagen 6][6] 
+
+
+ [1]: ../images/logovagrant.png
+ [2]: ../images/logomean.png 
+ [3]: ../images/logoaws.png
+ [4]: ../images/logodocker.png
+ [5]: ../images/logomlab.png
+ [6]: ../images/logoansible.png
+
+
+# Configuración
+
 
 ## Contenedores
 
@@ -22,7 +35,9 @@ Usaremos Vagrant para crear en AWS las máquinas virtuales que usaremos para des
 Las instrucciones detalladas de como orquestar las máquinas podemos encontrarlas en el [siguiente fichero](https://github.com/joseangeldiazg/MII-CloudComputing/tree/master/orquestacion). 
 
 
-El fichero relativo a la orquestación de las máquinas virtuales es el siguiente [Vagrantfile](). Notar como en provisionamiento hacemos referencia a los ficheros Playbook de Ansible que veremos en el punto siguiente, es decir, debemos crear estos para que nuestra orquestación funcione correctamente. 
+El fichero relativo a la orquestación de las máquinas virtuales es el siguiente [Vagrantfile](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/Vagrantfile). Notar como en provisionamiento hacemos referencia a los ficheros Playbook de Ansible que veremos en el punto siguiente, es decir, debemos crear estos para que nuestra orquestación funcione correctamente. 
+
+Debemos dejar claro también que para que la orquestación tenga lugar, debemos haber Exportado las variables de entorno relativas a la conexión con AWS. 
 
 
 ## Provisión de máquinas 
@@ -33,12 +48,29 @@ Podemos encontrar un pequeño tutorial sobre como utilizar Ansible en [este enla
 
 Dado que orquestaremos dos microservicios, usaremos dos PlayBooks de Ansible. 
 
-- [Playbook para Tareas]()
-- [Playbook para Roles]()
+- [Playbook para Tareas](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/tareas.yml)
+- [Playbook para Roles](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/microservices-iv/roles.yml)
 
 
-## Base de datos
+## SaaS
+
+
+### Base de datos
 
 Usaremos el SaS [mLab](www.mlab.com) para extraer el servicio de la base de datos de nuestra aplicación. Para ello necesitamos crear cuenta en dicho portal y de manera gratuita obtenemos una base de datos MongoDB (v3.2.11) a la que podremos conectar fácilmente y la cual está separada de nuestro despliegue final. 
+
+
+# Ejecución 
+
+Para poner en produccion todo lo anterior y tener por tanto nuestra infraestructura lista para recibir nuestra app. Solo tenemos que usar el siguiente comando:
+
+	vagrant up --provider=aws 
+
+Tras esto podemos ver como se crean nuestras instancias en AWS y además se bajan y ejecutan los contenedores Docker en ellas. El resultado podemos verlo en las siguientes capturas de pantalla. 
+
+![Creación de las instacias](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/msaws.png)
+
+![Instalacion de Docker con Ansible](https://github.com/joseangeldiazg/MII-CloudComputing/blob/master/images/msdocker.png)
+
 
 

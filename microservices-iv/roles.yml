@@ -20,12 +20,14 @@
     - name: Añadimos un repositorio estable
       shell: sudo add-apt-repository "deb https://apt.dockerproject.org/repo/ ubuntu-$(lsb_release -cs) main"
 
-    - name: Instalamos Docker:
-      shell: sudo apt-get update
-      shell: sudo apt-get -y install docker-engine
+    - name: Actualizamos 
+      apt: update_cache=yes
+
+    - name: Instalamos Docker
+      apt: pkg=docker-engine state=latest install_recommends=yes
 
     - name: Descargamos contenedor del ms Roles
-      shell: docker pull joseangeldiazf/roles
+      shell: docker pull joseangeldiazg/roles
 
     - name: Arrancamos el contenedor Docker
-      shell: docker run -itd --name roles  joseangeldiazf/roles
+      shell: docker run -itd --name roles  joseangeldiazg/roles
